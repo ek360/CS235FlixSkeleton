@@ -15,16 +15,14 @@ class Director:
         return f"<Director {self.__director_full_name}>"
 
     def __eq__(self, other):
-        # TODO
-        pass
+        return self.__director_full_name == other
 
     def __lt__(self, other):
-        # TODO
-        pass
+        return self.__director_full_name < other
 
     def __hash__(self):
-        # TODO
-        pass
+        return hash(self.__director_full_name)
+        
 
 
 class TestDirectorMethods:
@@ -36,3 +34,6 @@ class TestDirectorMethods:
         assert director2.director_full_name is None
         director3 = Director(42)
         assert director3.director_full_name is None
+
+
+
