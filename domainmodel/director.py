@@ -1,4 +1,3 @@
-
 class Director:
 
     def __init__(self, director_full_name: str):
@@ -18,10 +17,14 @@ class Director:
         return self.__director_full_name == other
 
     def __lt__(self, other):
-        return self.__director_full_name < other
+        if self.director_full_name < other.director_full_name:
+            return True
+        else:
+            return False
 
     def __hash__(self):
         return hash(self.__director_full_name)
+  
         
 
 
